@@ -4,3 +4,16 @@ result-*
 
 # Ignore automatically generated direnv output
 .direnv
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# OS X
+.DS_Store
+.Spotlight-V100
+.Trashes
+._*
+
+.vscode
+.idea
