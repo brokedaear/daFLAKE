@@ -39,6 +39,7 @@
           ciPackages = qlTools ++ buildTools ++ funTools;
 
           devPackages = with pkgs; [
+            fish # shell
             git # VCS
             lazygit # TUI Git interface
             mprocs # Process runner
