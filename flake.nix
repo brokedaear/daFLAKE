@@ -35,27 +35,24 @@
         ];
       in
       {
-        lib = rec {
+        lib = {
           ciPackages = qlTools ++ buildTools ++ funTools;
 
-          devPackages =
-            with pkgs;
-            [
-              git # VCS
-              lazygit # TUI Git interface
-              mprocs # Process runner
-              zellij # Terminal multiplexer
-              neovim # Better vim
-              helix # Quick text editor
-              go-task # Run tasks
-              just # Makefile alternative
-              jq # JSON manipulation
-              yq # YAML manipulation
-              ripgrep # Better grep
-              openapi-generator-cli # Generate OpenAPI spec
-              vegeta # HTTP Load Testing Tool
-            ]
-            ++ ciPackages;
+          devPackages = with pkgs; [
+            git # VCS
+            lazygit # TUI Git interface
+            mprocs # Process runner
+            zellij # Terminal multiplexer
+            neovim # Better vim
+            helix # Quick text editor
+            go-task # Run tasks
+            just # Makefile alternative
+            jq # JSON manipulation
+            yq # YAML manipulation
+            ripgrep # Better grep
+            openapi-generator-cli # Generate OpenAPI spec
+            vegeta # HTTP Load Testing Tool
+          ];
 
           # Function that creates script from file path
           mkScript =
