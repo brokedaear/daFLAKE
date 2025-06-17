@@ -22,6 +22,7 @@
 
         funTools = with pkgs; [
           figlet # ASCII text generator
+          dotacat # rainbow output
         ];
 
         buildTools = with pkgs; [
@@ -39,9 +40,12 @@
           ciPackages = qlTools ++ buildTools ++ funTools;
 
           devPackages = with pkgs; [
+            uutils-coreutils-noprefix # coreutils rewritten in Rust
             fish # shell
+            nushell # data oriented shell
             git # VCS
             lazygit # TUI Git interface
+            procs # ps replacement
             mprocs # Process runner
             zellij # Terminal multiplexer
             neovim # Better vim
@@ -49,10 +53,19 @@
             go-task # Run tasks
             just # Makefile alternative
             jq # JSON manipulation
+            jc # turn CLI output into JSON
+            gron # make JSON greppable
             yq # YAML manipulation
             ripgrep # Better grep
+            ripgrep-all # Grep for other types of files, has fzf integration
+            fzf # fast file searcher
+            sd # simple sed
             openapi-generator-cli # Generate OpenAPI spec
-            vegeta # HTTP Load Testing Tool
+            vegeta # HTTP load testing tool
+            xh # HTTP request tool
+            hyperfine # benchmarking tool
+            ast-grep # AST grepper
+            imagemagick # Image tool
           ];
 
           # Function that creates script from file path
