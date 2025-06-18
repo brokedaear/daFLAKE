@@ -27,6 +27,7 @@
 
         buildTools = with pkgs; [
           upx # Binary shrinker
+          uutils-coreutils-noprefix # coreutils rewritten in Rust
         ];
 
         qlTools = with pkgs; [
@@ -41,7 +42,6 @@
           ciPackages = qlTools ++ buildTools ++ funTools;
 
           devPackages = with pkgs; [
-            uutils-coreutils-noprefix # coreutils rewritten in Rust
             fish # shell
             nushell # data oriented shell
             git # VCS
