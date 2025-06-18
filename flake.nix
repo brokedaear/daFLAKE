@@ -33,6 +33,7 @@
           tokei # CLOC counter
           reuse # License lint
           nixfmt-rfc-style # nix formatter
+          nixd # nix language server
         ];
       in
       {
