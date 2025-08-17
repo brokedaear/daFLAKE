@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2025 BROKE DA EAR LLC <https://brokedaear.com>
+# SPDX-FileCopyrightText: 2021 Determinate Systems, Inc. <https://determinatesystems.com>
+#
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-License-Identifier: MIT
+# 
+# Modified from: https://github.com/DeterminateSystems/update-flake-lock
+
+name: "Update Nix flake.lock"
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0' # runs weekly on Sunday at 00:00
+
+jobs:
+  nix-flake-update:
+    permissions:
+      contents: write
+      id-token: write
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: DeterminateSystems/determinate-nix-action@v3
+      - uses: DeterminateSystems/update-flake-lock@main
+        with:
+          pr-title: "Update Nix flake inputs"
+          pr-labels: |
+            dependencies
+            automated
