@@ -49,7 +49,6 @@
             procs # ps replacement
             mprocs # Process runner
             zellij # Terminal multiplexer
-            neovim # Better vim
             helix # Quick text editor
             go-task # Run tasks
             just # Makefile alternative
