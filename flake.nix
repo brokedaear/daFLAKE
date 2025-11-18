@@ -42,13 +42,9 @@
           ciPackages = qlTools ++ buildTools ++ funTools;
 
           devPackages = with pkgs; [
-            fish # shell
-            nushell # data oriented shell
             git # VCS
-            lazygit # TUI Git interface
             procs # ps replacement
             mprocs # Process runner
-            zellij # Terminal multiplexer
             helix # Quick text editor
             go-task # Run tasks
             just # Makefile alternative
@@ -56,16 +52,12 @@
             jc # turn CLI output into JSON
             gron # make JSON greppable
             yq # YAML manipulation
-            ripgrep # Better grep
-            ripgrep-all # Grep for other types of files, has fzf integration
-            fzf # fast file searcher
             sd # simple sed
             openapi-generator-cli # Generate OpenAPI spec
             vegeta # HTTP load testing tool
             xh # HTTP request tool
             hyperfine # benchmarking tool
             ast-grep # AST grepper
-            imagemagick # Image tool
           ];
 
           # Function that creates script from file path
