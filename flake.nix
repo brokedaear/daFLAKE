@@ -33,7 +33,7 @@
         qlTools = with pkgs; [
           tokei # CLOC counter
           reuse # License lint
-          nixfmt-rfc-style # nix formatter
+          nixfmt # nix formatter
           nixd # nix language server
         ];
       in
