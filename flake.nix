@@ -26,8 +26,8 @@
         ];
 
         buildTools = with pkgs; [
-          upx # Binary shrinker
-          uutils-coreutils-noprefix # coreutils rewritten in Rust
+          # upx # Binary shrinker
+          # uutils-coreutils-noprefix # coreutils rewritten in Rust
         ];
 
         qlTools = with pkgs; [
@@ -45,19 +45,19 @@
             git # VCS
             procs # ps replacement
             mprocs # Process runner
-            helix # Quick text editor
+            # helix # Quick text editor
             go-task # Run tasks
             just # Makefile alternative
-            jq # JSON manipulation
-            jc # turn CLI output into JSON
-            gron # make JSON greppable
-            yq # YAML manipulation
-            sd # simple sed
-            openapi-generator-cli # Generate OpenAPI spec
-            vegeta # HTTP load testing tool
-            xh # HTTP request tool
-            hyperfine # benchmarking tool
-            ast-grep # AST grepper
+            # jq # JSON manipulation
+            # jc # turn CLI output into JSON
+            # gron # make JSON greppable
+            # yq # YAML manipulation
+            # sd # simple sed
+            # openapi-generator-cli # Generate OpenAPI spec
+            # vegeta # HTTP load testing tool
+            # xh # HTTP request tool
+            # hyperfine # benchmarking tool
+            # ast-grep # AST grepper
           ];
 
           # Function that creates script from file path
