@@ -2,7 +2,8 @@
   description = "BROKE DA EAR's environment tools and packages";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    #nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1"; # Nixpkgs unstable"
     flake-utils.url = "github:numtide/flake-utils";
   };
 
